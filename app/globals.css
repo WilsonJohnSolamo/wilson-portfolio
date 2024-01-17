@@ -31,3 +31,33 @@ body {
   mx-auto
   w-full;
 }
+
+.slide-btn {
+  @apply transition-all
+      duration-[500ms]
+      relative
+      overflow-hidden
+      z-[1];
+}
+.slide-btn.btn-design1 {
+  @apply bg-none;
+}
+
+.slide-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: left 0.5s;
+}
+.slide-btn::before.btn-design1 {
+  @apply bg-[#EEAF22];
+}
+
+.slide-btn:hover::before,
+.slide-btn:focus::before {
+  left: 0;
+}

@@ -45,6 +45,14 @@ const Menu = () => {
                 Contact
               </Link>
             </li>
+            <li className="w-[95px] slide-btn btn-design1 border-[2px] hover:border-[#de3b30] border-[#EEAF22] py-[5px] px-[5px] ">
+              <Link
+                href={"/contact"}
+                className="hover:text-[#de3b30] hover:font-bold text-[#EEAF22] font-normal transition-all duration-300 "
+              >
+                RESUME
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
