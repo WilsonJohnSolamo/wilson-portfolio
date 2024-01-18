@@ -1,30 +1,40 @@
 import Link from "next/link";
 import React from "react";
 
+const smoothScrollTo = (targetId) => {
+  const targetElement = document.getElementById(targetId);
+  if (targetElement) {
+    window.scrollTo({
+      top: targetElement.offsetTop,
+      behavior: "smooth",
+    });
+  }
+};
+
 const Menu = () => {
   return (
-    <section className="sticky top-0  z-[100]">
-      <div className="bg-[#0e0e12]">
+    <section className="sticky top-0  z-[100] shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
+      <div className="bg-[#0e0e12] px-[20px]">
         <div className="flex justify-between container-primary py-[10px] ">
           <Link
             href={"/"}
-            className="leading-[40px] text-[40px] font-bold hover:scale-[120%] transition-all duration-300 hover:text-[#EEAF22]"
+            className="leading-[40px] text-[40px] font-bold hover:scale-[120%] transition-all duration-300 hover:text-main-gold text-main-cream"
           >
             JW
           </Link>
-          <ul className="leading-[20px] flex justify-evenly space-x-[70px] text-[20px] font-bold text-[#F6DBAC] items-center">
+          <ul className="leading-[20px] flex justify-evenly space-x-[70px] text-[20px] font-bold text-main-cream items-center">
             <li>
               <Link
                 href={"/"}
-                className="hover:text-[#DF3B30] transition-all duration-300"
+                className="hover:text-main-red-orange transition-all duration-300"
               >
                 Home
               </Link>
             </li>
             <li>
               <Link
-                href={"/about"}
-                className="hover:text-[#DF3B30] transition-all duration-300"
+                href={"#about"}
+                className="hover:text-main-red-orange transition-all duration-300 scroll-smooth"
               >
                 About
               </Link>
@@ -32,7 +42,7 @@ const Menu = () => {
             <li>
               <Link
                 href={"/projects"}
-                className="hover:text-[#DF3B30] transition-all duration-300"
+                className="hover:text-main-red-orange transition-all duration-300"
               >
                 Projects
               </Link>
@@ -40,15 +50,16 @@ const Menu = () => {
             <li>
               <Link
                 href={"/contact"}
-                className="hover:text-[#DF3B30] transition-all duration-300"
+                className="hover:text-main-red-orange transition-all duration-300"
               >
                 Contact
               </Link>
             </li>
-            <li className="w-[95px] slide-btn btn-design1 border-[2px] hover:border-[#de3b30] border-[#EEAF22] py-[5px] px-[5px] ">
+            <li className="group w-[95px] slide-btn btn-design1 border-[2px] hover:border-main-red-orange border-main-gold py-[5px] px-[5px] ">
               <Link
-                href={"/contact"}
-                className="hover:text-[#de3b30] hover:font-bold text-[#EEAF22] font-normal transition-all duration-300 "
+                href="/resume.pdf"
+                target="_blank"
+                className="group-hover:text-main-red-orange group-hover:font-bold text-main-gold font-normal transition-all duration-300 "
               >
                 RESUME
               </Link>
@@ -56,10 +67,10 @@ const Menu = () => {
           </ul>
         </div>
       </div>
-      <div className="bg-[#de3b30] h-[10px]"></div>
-      <div className="bg-[#e4722b] h-[10px]"></div>
-      <div className="bg-[#EEAF22] h-[10px]"></div>
-      <div className="bg-[#F6DBAD] h-[10px]"></div>
+      <div className="bg-main-red-orange h-[10px]"></div>
+      <div className="bg-main-orange h-[10px]"></div>
+      <div className="bg-main-gold h-[10px]"></div>
+      <div className="bg-main-cream h-[10px]"></div>
     </section>
   );
 };
