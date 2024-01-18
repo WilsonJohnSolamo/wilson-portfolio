@@ -27,7 +27,7 @@ body {
 }
 
 .container-primary {
-  @apply max-w-[1090px]
+  @apply max-w-[1280px]
   mx-auto
   w-full;
 }

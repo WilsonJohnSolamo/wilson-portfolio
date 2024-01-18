@@ -71,6 +71,9 @@ const Menu = () => {
       <div className="bg-main-orange h-[10px]"></div>
       <div className="bg-main-gold h-[10px]"></div>
       <div className="bg-main-cream h-[10px]"></div>
+      {/* <div className="bg-[#4BB8B3] h-[10px]"></div>
+      <div className="bg-[#259FA2] h-[10px]"></div>
+      <div className="bg-[#146d83] h-[10px]"></div> */}
     </section>
   );
 };

@@ -3,7 +3,7 @@ import React from "react";
 const MainBanner = () => {
   return (
     // <section className="min-h-screen w-full bg-[#012152] py-[100px]">
-    <section className="relative min-h-screen w-full bg-[#16161c] pt-[120px] pb-[50px] px-[20px] ">
+    <section className="relative min-h-screen overflow-hidden w-full bg-[#16161c] pt-[120px] pb-[50px] px-[20px] ">
       <div className="container-primary mt-[50px]">
         <div className="relative text-[60px] xl:text-[80px] leading-[80px] text-main-orange font-bold mb-[5px]">
           John Wilson Solamo
@@ -24,6 +24,15 @@ const MainBanner = () => {
           possibilities of web development.
         </p>
       </div>
+      {/* <div className="min-h-screen absolute flex top-0 bottom-0 right-[500px]">
+        <div className=" min-w-[50px] bg-main-red-orange " />
+        <div className=" min-w-[50px] bg-main-orange " />
+        <div className=" min-w-[50px] bg-main-gold " />
+        <div className=" min-w-[50px] bg-main-cream " />
+        <div className=" min-w-[50px] bg-[#4BB8B3] " />
+        <div className=" min-w-[50px] bg-[#259FA2] " />
+        <div className=" min-w-[50px] bg-[#146d83] " />
+      </div> */}
     </section>
   );
 };
