@@ -42,9 +42,9 @@ const AboutMe = () => {
             <div>
               <div className="text-[20px] font-bold">Beyond Coding:</div>
               <p className="text-[17px] pl-[10px]">
-                When I'm not immersed in lines of code, you'll find me exploring
-                new technologies, staying updated on industry trends, and
-                enjoying the balance of work and play. Collaboration,
+                When I&apos;m not immersed in lines of code, you&apos;ll find me
+                exploring new technologies, staying updated on industry trends,
+                and enjoying the balance of work and play. Collaboration,
                 innovation, and attention to detail are at the core of my
                 approach.
               </p>
