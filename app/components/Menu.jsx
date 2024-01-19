@@ -1,14 +1,22 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 
-const smoothScrollTo = (targetId) => {
-  const targetElement = document.getElementById(targetId);
-  if (targetElement) {
-    window.scrollTo({
-      top: targetElement.offsetTop,
-      behavior: "smooth",
-    });
-  }
+const handleScroll = (e) => {
+  e.preventDefault();
+  const href = e.currentTarget.href;
+  const targetId = href.replace(/.*#/, "");
+  const elem = document.getElementById(targetId);
+  elem?.scrollIntoView({
+    behavior: "smooth",
+  });
+
+  // Update the class name of the clicked link
+  const links = document.querySelectorAll(".nav-link");
+  links.forEach((link) => {
+    link.classList.remove("active");
+  });
+  e.currentTarget.classList.add("active");
 };
 
 const Menu = () => {
@@ -34,6 +42,7 @@ const Menu = () => {
             <li>
               <Link
                 href={"#about"}
+                onClick={handleScroll}
                 className="hover:text-main-red-orange transition-all duration-300 scroll-smooth"
               >
                 About
@@ -41,7 +50,8 @@ const Menu = () => {
             </li>
             <li>
               <Link
-                href={"/projects"}
+                href={"#projects"}
+                onClick={handleScroll}
                 className="hover:text-main-red-orange transition-all duration-300"
               >
                 Projects
@@ -49,7 +59,8 @@ const Menu = () => {
             </li>
             <li>
               <Link
-                href={"/contact"}
+                href={"#contact"}
+                onClick={handleScroll}
                 className="hover:text-main-red-orange transition-all duration-300"
               >
                 Contact

@@ -2,7 +2,10 @@ import React from "react";
 
 const AboutMe = () => {
   return (
-    <section className="min-h-screen w-full bg-[#16161c] relative py-[100px] px-[20px]">
+    <section
+      id="about"
+      className="min-h-[900px] w-full bg-[#16161c] relative py-[100px] px-[20px]"
+    >
       {/* <div className="box bg-main-red-orange absolute inset-x-0 bottom-0 top-[0px]"></div>
       <div className="box bg-main-orange absolute inset-x-0 top-[15px] bottom-[0px]"></div>
       <div className="box bg-main-gold absolute inset-x-0 top-[35px] bottom-[0px]"></div>
