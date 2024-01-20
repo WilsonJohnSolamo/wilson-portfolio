@@ -19,6 +19,14 @@ const handleScroll = (e) => {
   e.currentTarget.classList.add("active");
 };
 
+const menu = [
+  { link_url: "/", target: "_self", link_label: "Home" },
+  { link_url: "#about", target: "_self", link_label: "About" },
+  { link_url: "#projects", target: "_self", link_label: "Projects" },
+  { link_url: "#contact", target: "_self", link_label: "Contact" },
+  { link_url: "/resume.pdf", target: "_blank", link_label: "Resume" },
+];
+
 const Menu = () => {
   return (
     <section className="sticky top-0  z-[100] shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
@@ -31,15 +39,47 @@ const Menu = () => {
             JW
           </Link>
           <ul className="leading-[20px] flex justify-evenly space-x-[70px] text-[20px] font-bold text-main-cream items-center">
-            <li>
-              <Link
-                href={"/"}
-                className="hover:text-main-red-orange transition-all duration-300"
-              >
-                Home
-              </Link>
-            </li>
-            <li>
+            {/* {menu.map((item, index => ( */}
+            {menu.map((item, index) => (
+              <li key={index}>
+                {item.target === "_blank" ? (
+                  <Link
+                    href={item.link_url}
+                    className="hover:text-main-red-orange transition-all duration-300"
+                    target={item.target}
+                  >
+                    {item.link_label}
+                  </Link>
+                ) : (
+                  <Link
+                    href={item.link_url}
+                    className="hover:text-main-red-orange transition-all duration-300"
+                    onClick={handleScroll}
+                    target={item.target}
+                  >
+                    {item.link_label}
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div className="bg-main-red-orange h-[10px]"></div>
+      <div className="bg-main-orange h-[10px]"></div>
+      <div className="bg-main-gold h-[10px]"></div>
+      <div className="bg-main-cream h-[10px]"></div>
+      {/* <div className="bg-[#4BB8B3] h-[10px]"></div>
+      <div className="bg-[#259FA2] h-[10px]"></div>
+      <div className="bg-[#146d83] h-[10px]"></div> */}
+    </section>
+  );
+};
+
+export default Menu;
+
+{
+  /* <li>
               <Link
                 href={"#about"}
                 onClick={handleScroll}
@@ -70,23 +110,9 @@ const Menu = () => {
               <Link
                 href="/resume.pdf"
                 target="_blank"
-                className="group-hover:text-main-red-orange group-hover:font-bold text-main-gold font-normal transition-all duration-300 "
+                className="uppercase group-hover:text-main-red-orange group-hover:font-bold text-main-gold font-normal transition-all duration-300 "
               >
                 RESUME
               </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="bg-main-red-orange h-[10px]"></div>
-      <div className="bg-main-orange h-[10px]"></div>
-      <div className="bg-main-gold h-[10px]"></div>
-      <div className="bg-main-cream h-[10px]"></div>
-      {/* <div className="bg-[#4BB8B3] h-[10px]"></div>
-      <div className="bg-[#259FA2] h-[10px]"></div>
-      <div className="bg-[#146d83] h-[10px]"></div> */}
-    </section>
-  );
-};
-
-export default Menu;
+            </li> */
+}

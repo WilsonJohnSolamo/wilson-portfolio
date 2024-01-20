@@ -3,10 +3,6 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
-import portfolio from "@/public/portfolio.png";
-import thered from "@/public/thered.png";
-import halcyonagile from "@/public/halcyonagile.png";
-
 import CustomIcon from "@/public/CustomICon";
 import Link from "next/link";
 
@@ -43,7 +39,6 @@ const projectsData = [
 const Projects = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
-  const [overflowHidden, setOverflowHidden] = useState(false);
 
   const openModal = (image) => {
     setSelectedImage(image);
@@ -57,19 +52,6 @@ const Projects = () => {
       document.body.classList.remove("overflow-hidden");
     }
   }, [showModal]);
-
-  // useEffect(() => {
-  //   if (overflowHidden) {
-  //     document.body.classList.add("overflow-hidden");
-  //   } else {
-  //     document.body.classList.remove("overflow-hidden");
-  //   }
-
-  //   // Cleanup function to remove event listener when component unmounts
-  //   return () => {
-  //     document.body.classList.remove("overflow-hidden");
-  //   };
-  // }, [overflowHidden]);
 
   return (
     <section
