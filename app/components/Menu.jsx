@@ -41,11 +41,18 @@ const Menu = () => {
           <ul className="leading-[20px] flex justify-evenly space-x-[70px] text-[20px] font-bold text-main-cream items-center">
             {/* {menu.map((item, index => ( */}
             {menu.map((item, index) => (
-              <li key={index}>
+              <li
+                key={index}
+                className={`${
+                  item.target === "_blank"
+                    ? "group w-[95px] slide-btn btn-design1 border-[2px] hover:border-main-red-orange border-main-gold py-[5px] px-[5px]"
+                    : ""
+                }`}
+              >
                 {item.target === "_blank" ? (
                   <Link
                     href={item.link_url}
-                    className="hover:text-main-red-orange transition-all duration-300"
+                    className="uppercase group-hover:text-main-red-orange group-hover:font-bold text-main-gold font-normal transition-all duration-300"
                     target={item.target}
                   >
                     {item.link_label}
