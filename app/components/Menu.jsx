@@ -1,4 +1,5 @@
 "use client";
+import CustomIcon from "@/public/CustomICon";
 import Link from "next/link";
 import React from "react";
 
@@ -38,7 +39,7 @@ const Menu = () => {
           >
             JW
           </Link>
-          <ul className="leading-[20px] flex justify-evenly space-x-[70px] text-[20px] font-bold text-main-cream items-center">
+          <ul className="leading-[20px] hidden md:flex justify-evenly space-x-[70px] text-[20px] font-bold text-main-cream items-center">
             {/* {menu.map((item, index => ( */}
             {menu.map((item, index) => (
               <li
@@ -70,6 +71,10 @@ const Menu = () => {
               </li>
             ))}
           </ul>
+          {/* <input id="toggle" type="checkbox"></input> */}
+          <div className="text-main-orange flex md:hidden max-w-[35px] cursor-pointer">
+            <CustomIcon iconType={"hamburger"} />
+          </div>
         </div>
       </div>
       <div className="bg-main-red-orange h-[10px]"></div>
