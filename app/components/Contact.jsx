@@ -39,15 +39,45 @@ const Contact = () => {
         <div className="text-[60px] font-bold text-main-orange mb-[50px]">
           Contact
         </div>
-        <form onSubmit={handleSubmit}>
-          {/* Your form inputs */}
-          <button
-            type="submit"
-            className="border-[2px] border-main-red-orange rounded-[20px] px-[13px] py-[7px] text-[17px] leading-[20px] hover:text-[#16161c] hover:bg-main-gold"
-          >
-            Send Message
-          </button>
-        </form>
+        <div className="flex justify-between">
+          <div>TEST</div>
+          <form onSubmit={handleSubmit} className="">
+            <div className="flex gap-[20px] pb-[50px]">
+              <input
+                type="text"
+                value={name}
+                placeholder="Name"
+                onChange={(e) => setName(e.target.value)}
+                className="input-field"
+              />
+
+              <input
+                type="email"
+                value={email}
+                placeholder="Email"
+                onChange={(e) => setEmail(e.target.value)}
+                className="input-field"
+              />
+            </div>
+
+            <div className="pb-[20px]">
+              <textarea
+                value={message}
+                placeholder="Message"
+                onChange={(e) => setMessage(e.target.value)}
+                className="input-field w-full h-[280px]"
+              />
+            </div>
+
+            {/* <button type="submit">Send Message</button> */}
+            <button
+              type="submit"
+              className="border-[2px] border-main-red-orange rounded-[10px] px-[13px] py-[7px] text-[17px] leading-[20px] hover:text-[#16161c] hover:bg-main-gold"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   );
