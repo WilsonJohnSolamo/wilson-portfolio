@@ -2,13 +2,9 @@
 
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-AOS.init();
 
 import CustomIcon from "@/public/CustomICon";
 import Link from "next/link";
-<script>AOS.init();</script>;
 
 const projectsData = [
   {
@@ -72,39 +68,39 @@ const Projects = () => {
               key={index}
               className="lg:flex items-center justify-center gap-[50px]"
             >
-              <div className="w-[560px] h-[400px] items-center justify-center flex">
-                <div className="transition-all duration-300 hover:p-[10px] p-[0px] bg-[#4BB8B3] hidden md:flex">
-                  <div className="transition-all duration-300 hover:p-[10px] p-[0px] bg-[#259FA2]">
-                    <div
-                      onClick={() => openModal(project.image)}
-                      href={project.link}
-                      className="transition-all duration-300 group-hover:p-[10px] p-[0px] "
-                    >
-                      <div className="bg-[#29292a] relative group">
-                        <Image
-                          src={project.image}
-                          width={500}
-                          height={500}
-                          className="shadow-[0px_0px_10px_rgba(0,0,0,0.25)] group-hover:opacity-20 cursor-pointer"
-                          alt="project image"
-                        />
-                        <div className="absolute top-[50%] left-[36%] text-[20px] hidden opacity-50 group-hover:flex transition-all cursor-pointer duration-300">
-                          Click to expand
-                        </div>
-                      </div>
+              <div className="max-w-[500px] h-[400px] items-center justify-center flex">
+                {/* <div className="transition-all duration-300 hover:p-[10px] p-[0px] bg-[#4BB8B3] hidden md:flex">
+                  <div className="transition-all duration-300 hover:p-[10px] p-[0px] bg-[#259FA2] hidden md:flex"> */}
+                <div
+                  onClick={() => openModal(project.image)}
+                  href={project.link}
+                  className="transition-all duration-300 group-hover:p-[10px] p-[0px] "
+                >
+                  <div className="bg-[rgb(41,41,42)] relative group max-w-[500px]">
+                    <Image
+                      src={project.image}
+                      width={500}
+                      height={500}
+                      className="max-w-[500px] shadow-[0px_0px_10px_rgba(0,0,0,0.25)] group-hover:opacity-20 cursor-pointer"
+                      alt="project image"
+                    />
+                    <div className="absolute top-[50%] left-[36%] text-[20px] hidden opacity-50 group-hover:flex transition-all cursor-pointer duration-300">
+                      Click to expand
                     </div>
                   </div>
                 </div>
+                {/* </div>
+                </div> */}
               </div>
               <div className="max-w-[500px]">
-                <div className="flex">
+                <div className="flex-col md:flex">
                   <div className="text-main-cream text-[30px] leading-[30px] pb-[5px] font-bold uppercase tracking-[1px]">
                     {project.title}
                   </div>
                   <Link
                     href={project.link}
                     target="_blank"
-                    className="ml-[20px] text-[20px] text-[#0C51AC] hover:text-[#63b9db] pb-[20px] flex items-center gap-[3px] transition-all duration-300"
+                    className="md:ml-[20px] text-[15px] md:text-[20px] text-[#0C51AC] hover:text-[#63b9db] pb-[20px] flex items-center gap-[3px] transition-all duration-300"
                   >
                     <div className="max-w-[20px] max-h-[20px]">
                       <CustomIcon iconType={"globe"} />
