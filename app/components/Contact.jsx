@@ -38,16 +38,16 @@ const Contact = () => {
       className="min-h-screen w-full bg-[#16161c] pt-[100px] pb-[50px] px-[20px]"
     >
       <div className="container-primary">
-        <div className="text-[60px] font-bold text-main-red-orange mb-[50px]">
+        <div className="leading-[1.3] text-[40px] sm:text-[60px] font-bold text-main-red-orange mb-[15px] sm:mb-[50px]">
           Contact
         </div>
         <div className="flex justify-between">
           <div className="max-w-[700px]">
-            <div className="text-[35px] font-bold mb-[10px] text-main-orange">
+            <div className="text-[20px] sm:text-[35px] font-bold mb-[10px] text-main-orange">
               Get in touch
             </div>
             <div className="mb-[30px]">
-              <p className="text-[25px] text-justify text-main-cream">
+              <p className="text-[15px] md:text-[25px] text-justify text-main-cream">
                 Have a project in mind that you want to collaborate with or just
                 want to connect? I&apos;d love to hear from you! Feel free to
                 reach out via email
@@ -84,50 +84,6 @@ const Contact = () => {
                 <CustomIcon iconType={"github"} />
               </Link>
             </div>
-          </div>
-          <div>
-            <form
-              onSubmit={handleSubmit}
-              action="mailto:john.solamo3@gmail.com"
-              method="post"
-              enctype="text/plain"
-              className=""
-            >
-              <div className="flex gap-[20px] pb-[50px]">
-                <input
-                  type="text"
-                  value={name}
-                  placeholder="Name"
-                  onChange={(e) => setName(e.target.value)}
-                  className="input-field"
-                />
-
-                <input
-                  type="email"
-                  value={email}
-                  placeholder="Email"
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="input-field"
-                />
-              </div>
-
-              <div className="pb-[20px]">
-                <textarea
-                  value={message}
-                  placeholder="Message"
-                  onChange={(e) => setMessage(e.target.value)}
-                  className="input-field w-full h-[280px]"
-                />
-              </div>
-
-              {/* <button type="submit">Send Message</button> */}
-              <button
-                type="submit"
-                className="border-[2px] border-main-red-orange rounded-[10px] px-[13px] py-[7px] text-[17px] leading-[20px] hover:text-[#16161c] hover:bg-main-gold"
-              >
-                Send Message
-              </button>
-            </form>
           </div>
           {/* <div className="flex gap-[50px]">
             <div className="flex flex-col gap-[20px]">

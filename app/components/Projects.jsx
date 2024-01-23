@@ -59,7 +59,7 @@ const Projects = () => {
       className="min-h-screen w-full bg-[#16161c] pt-[100px] pb-[50px] px-[20px]"
     >
       <div className="container-primary">
-        <div className="text-[60px] font-bold text-main-orange mb-[50px]">
+        <div className="text-[40px] sm:text-[60px] font-bold text-main-orange mb-[0px] sm:mb-[50px]">
           Projects
         </div>
         <div>
@@ -68,20 +68,20 @@ const Projects = () => {
               key={index}
               className="lg:flex items-center justify-center gap-[50px]"
             >
-              <div className="max-w-[500px] h-[400px] items-center justify-center flex">
+              <div className="max-w-[500px] max-h-[400px] items-center justify-center flex">
                 {/* <div className="transition-all duration-300 hover:p-[10px] p-[0px] bg-[#4BB8B3] hidden md:flex">
                   <div className="transition-all duration-300 hover:p-[10px] p-[0px] bg-[#259FA2] hidden md:flex"> */}
                 <div
                   onClick={() => openModal(project.image)}
                   href={project.link}
-                  className="transition-all duration-300 group-hover:p-[10px] p-[0px] "
+                  className="transition-all duration-300 group-hover:p-[10px] p-[0px]  py-[50px] sm:py-[0px]"
                 >
-                  <div className="bg-[rgb(41,41,42)] relative group max-w-[500px]">
+                  <div className="bg-[rgb(41,41,42)] relative group w-full max-w-[500px]">
                     <Image
                       src={project.image}
-                      width={500}
-                      height={500}
-                      className="max-w-[500px] shadow-[0px_0px_10px_rgba(0,0,0,0.25)] group-hover:opacity-20 cursor-pointer"
+                      width={1000}
+                      height={1000}
+                      className="max-w-[500px] w-full shadow-[0px_0px_10px_rgba(0,0,0,0.25)] group-hover:opacity-20 cursor-pointer"
                       alt="project image"
                     />
                     <div className="absolute top-[50%] left-[36%] text-[20px] hidden opacity-50 group-hover:flex transition-all cursor-pointer duration-300">
@@ -94,7 +94,7 @@ const Projects = () => {
               </div>
               <div className="max-w-[500px]">
                 <div className="flex-col md:flex">
-                  <div className="text-main-cream text-[30px] leading-[30px] pb-[5px] font-bold uppercase tracking-[1px]">
+                  <div className="text-main-cream text-[25px] sm:text-[30px] leading-[30px] pb-[5px] font-bold uppercase tracking-[1px]">
                     {project.title}
                   </div>
                   <Link
@@ -111,7 +111,7 @@ const Projects = () => {
                 <p className="text-justify text-main-cream text-[15px] mb-[15px]">
                   {project.description}
                 </p>
-                <div className="flex gap-[10px] tracking-[0.80px]">
+                <div className="flex flex-wrap gap-[10px] tracking-[0.80px]">
                   {project.technologies.map((tech, techIndex) => (
                     <div
                       key={techIndex}

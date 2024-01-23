@@ -86,7 +86,8 @@ body {
 .contact-link {
   @apply text-main-orange 
   hover:text-main-red-orange 
-  max-w-[70px] 
+  sm:max-w-[70px] 
+  max-w-[40px]
   flex 
   justify-center 
   items-center 
